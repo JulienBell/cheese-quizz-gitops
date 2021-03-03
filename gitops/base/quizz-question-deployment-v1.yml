@@ -22,6 +22,7 @@ spec:
     metadata:
       labels:
         app: cheese-quizz-question
+        maistra.io/expose-route: 'true'
         version: v1
       annotations:
         prometheus.io/scrape: "true"

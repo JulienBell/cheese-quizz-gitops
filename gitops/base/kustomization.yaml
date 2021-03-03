@@ -6,3 +6,6 @@ resources:
   - quizz-client-deployment.yml
   - quizz-client-service.yml
   - quizz-client-route.yml
+  - users-admin.yml
+  - users-edit.yml
+  - users-view.yml

@@ -1,6 +1,31 @@
-bases:
-  - ../../base
-patchesStrategicMerge:
-  - quizz-question-deployment-v1.yml
 resources:
+  - ../../base
   - quizz-question-configmap-v2.yml
+
+nameSuffix: -uat
+
+patchesStrategicMerge:
+  - quizz-question-deployment-v1.yml  
+
+patches:
+- path: users-admin-patch.yml
+  target:
+    group: rbac.authorization.k8s.io
+    version: v1
+    kind: RoleBinding
+    name: admin
+    namespace: cheese-quizz
+- path: users-edit-patch.yml
+  target:
+    group: rbac.authorization.k8s.io
+    version: v1
+    kind: RoleBinding
+    name: edit
+    namespace: cheese-quizz
+- path: users-view-patch.yml
+  target:
+    group: rbac.authorization.k8s.io
+    version: v1
+    kind: RoleBinding
+    name: view
+    namespace: cheese-quizz  
