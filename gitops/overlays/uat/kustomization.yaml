@@ -1,5 +1,7 @@
-resources:
+bases:
   - ../../base
+
+resources:
   - quizz-question-configmap-v2.yml
 
 nameSuffix: -uat
