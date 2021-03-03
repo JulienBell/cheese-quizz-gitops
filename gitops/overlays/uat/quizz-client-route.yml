@@ -1,8 +1,0 @@
-apiVersion: route.openshift.io/v1
-kind: Route
-metadata:
-  name: cheese-quizz-client
-spec:
-  to:
-    kind: Service
-    name: cheese-quizz-client-uat

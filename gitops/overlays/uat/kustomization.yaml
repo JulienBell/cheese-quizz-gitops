@@ -4,11 +4,8 @@ bases:
 resources:
   - quizz-question-configmap-v2.yml
 
-nameSuffix: -uat
-
 patchesStrategicMerge:
   - quizz-question-deployment-v1.yml  
-  - quizz-client-route.yml
 
 patches:
 - path: users-admin-patch.yml
