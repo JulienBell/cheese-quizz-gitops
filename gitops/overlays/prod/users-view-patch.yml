@@ -5,7 +5,7 @@
       apiGroup: rbac.authorization.k8s.io
       name: Alice-dev
 - op: add
-  path: /subjects
+  path: /subjects/-
   value:
     - kind: User
       apiGroup: rbac.authorization.k8s.io
